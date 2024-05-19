@@ -3,7 +3,7 @@
 <footer>
     <div class="left">
         <div class="logo-container">
-            <img src="./assets/images/team01.png" alt="Team Logo" class="logo" />
+            <img src="./assets/images/team01.png" alt="Team Logo" class="footer-logo" />
         </div>
     </div>
     <div class="right">

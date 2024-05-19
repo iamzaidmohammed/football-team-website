@@ -262,6 +262,11 @@ footer .right {
   padding: 20px 0;
 }
 
+.footer-logo {
+  width: 50px;
+  cursor: pointer;
+}
+
 .footer-links {
   padding-top: 20px;
   color: var(--textWhite);
