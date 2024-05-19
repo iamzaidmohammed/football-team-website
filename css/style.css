@@ -36,15 +36,21 @@ body {
   overflow-x: hidden;
 }
 
-nav {
-  padding: 0 20px;
-}
-
+/* Multiple styling */
 i {
   cursor: pointer;
 }
 
-/* NAVBAR */
+main {
+  padding-top: 75px;
+  width: 100%;
+}
+
+nav {
+  padding: 0 20px;
+}
+
+/* Navbar */
 
 nav {
   width: 100%;
@@ -111,11 +117,6 @@ i.fa-xmark {
 }
 
 /* Home */
-main {
-  padding-top: 75px;
-  width: 100%;
-}
-
 .banner {
   position: relative;
   height: 300px;
@@ -249,6 +250,27 @@ main {
   text-decoration: underline;
 }
 
+/* About Page */
+#about {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#about section {
+  margin-top: 20px;
+}
+
+#about section h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: var(--secondary);
+}
+
+#about section:nth-child(2) p {
+  margin-bottom: 5px;
+}
+
+/* Footer */
 footer {
   background-color: var(--primary);
   margin-top: 15px;
@@ -263,7 +285,7 @@ footer .right {
 }
 
 .footer-logo {
-  width: 50px;
+  width: 100px;
   cursor: pointer;
 }
 
@@ -291,7 +313,7 @@ footer .right {
 }
 
 @media only screen and (min-width: 768px) {
-  /* NAVBAR */
+  /* Navbar */
   i.fa-bars,
   i.fa-xmark {
     display: none;
@@ -353,6 +375,13 @@ footer .right {
     padding: 0 50px;
   }
 
+  /* About Page */
+  #about {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /* Footer */
   footer {
     padding: 0 50px;
     justify-content: space-around;
@@ -360,10 +389,12 @@ footer .right {
 }
 
 @media only screen and (min-width: 1024px) {
+  /* Navbar */
   nav {
     padding: 0 100px;
   }
 
+  /* Home */
   .banner,
   .banner-overlay {
     height: 650px;
@@ -405,6 +436,12 @@ footer .right {
     padding: 0 100px;
   }
 
+  /* About Page */
+  #about {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  /* Footer */
   footer {
     padding: 0 100px;
   }
