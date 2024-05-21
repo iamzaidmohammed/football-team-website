@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Bai+Jamjuree:wght@400,600&display=swap");
 
 :root {
   --primary: #ff6138;
@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Bai Jamjuree";
   list-style: none;
   text-decoration: none;
 }
@@ -29,11 +30,16 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  font-family: Montserrat, sans-serif;
   overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Multiple styling */
@@ -44,10 +50,7 @@ i {
 main {
   padding-top: 75px;
   width: 100%;
-}
-
-nav {
-  padding: 0 20px;
+  flex: 1;
 }
 
 /* Navbar */
@@ -55,6 +58,7 @@ nav {
 nav {
   width: 100%;
   height: 75px;
+  padding: 0 20px;
   background-color: var(--primary);
   display: flex;
   align-items: center;
@@ -251,7 +255,8 @@ i.fa-xmark {
 }
 
 /* About Page */
-#about {
+#about,
+#contact {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -268,6 +273,91 @@ i.fa-xmark {
 
 #about section:nth-child(2) p {
   margin-bottom: 5px;
+}
+
+/* Contact */
+.heading {
+  font-size: 32px;
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+#contact-form {
+  background-color: var(--primary);
+  padding: 10px 20px;
+  color: var(--textWhite);
+  margin: auto;
+  max-width: 500px;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input-field,
+.text-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  width: calc(100% / 2 - 13px);
+}
+
+.input-field input {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  border: 1px solid var(--primary);
+}
+
+.text-field textarea {
+  outline: none;
+  border: 1px solid var(--primary);
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: none;
+  height: 100px;
+}
+
+.text-field textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-field textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.text-field textarea::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+#submit {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  transition: all 0.2s ease;
+}
+
+#submit:hover {
+  background-color: var(--secondary);
+  color: var(--textWhite);
 }
 
 /* Footer */
@@ -376,7 +466,8 @@ footer .right {
   }
 
   /* About Page */
-  #about {
+  #about,
+  #contact {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -437,7 +528,8 @@ footer .right {
   }
 
   /* About Page */
-  #about {
+  #about,
+  #contact {
     padding-left: 100px;
     padding-right: 100px;
   }
