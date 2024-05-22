@@ -256,6 +256,7 @@ i.fa-xmark {
 
 /* About Page */
 #about,
+#team,
 #contact {
   padding-left: 20px;
   padding-right: 20px;
@@ -273,6 +274,73 @@ i.fa-xmark {
 
 #about section:nth-child(2) p {
   margin-bottom: 5px;
+}
+
+/* Team */
+#team .heading {
+  padding: 20px 0;
+  font-size: 45px;
+  color: var(--primary);
+}
+
+.players-container {
+  margin-bottom: 30px;
+}
+
+.players-container h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+.position {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.player {
+  max-width: 200px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.player:not(:last-child) {
+  margin-right: 20px;
+}
+
+.player img {
+  width: 100%;
+}
+
+.player .player-info {
+  padding: 10px;
+}
+
+.player-info .player-num {
+  font-size: 19px;
+  color: var(--primary);
+  margin-bottom: 5px;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+
+.player-info .player-name {
+  font-size: 19px;
+}
+
+.player:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--textWhite);
+  transform: scale(1.025);
+}
+
+.player:hover .player-num {
+  color: var(--textWhite);
+  text-decoration-color: var(--textWhite);
 }
 
 /* Contact */
@@ -467,6 +535,7 @@ footer .right {
 
   /* About Page */
   #about,
+  #team,
   #contact {
     padding-left: 50px;
     padding-right: 50px;
@@ -529,10 +598,12 @@ footer .right {
 
   /* About Page */
   #about,
+  #team,
   #contact {
     padding-left: 100px;
     padding-right: 100px;
   }
+
   /* Footer */
   footer {
     padding: 0 100px;
