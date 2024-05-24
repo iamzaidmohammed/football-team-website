@@ -19,10 +19,10 @@
         <i class="fa-solid fa-xmark"></i>
         <div class="menu">
             <ul class="links">
-                <li class="link"><a href="index.php">Home</a></li>
+                <li class="link"><a href="#" class="active">Home</a></li>
                 <li class="link"><a href="./pages/about.php">About</a></li>
                 <li class="link"><a href="./pages/team.php">Team</a></li>
-                <li class="link"><a href="./pages/matches.php">Matches</a></li>
+                <li class="link"><a href="./pages/matches/fixtures.php">Matches</a></li>
                 <li class="link"><a href="./pages/contact.php">Contact Us</a></li>
             </ul>
         </div>
@@ -42,14 +42,19 @@
         <section class="matches">
             <h2>Upcoming Match</h2>
             <div class="upcoming-match">
-                <div class="home-team">
-                    <img src="./assets/images/team01.png" alt="Home team logo" class="team-logo">
-                    <p class="team-name">Manchester City</p>
+                <div class="match-date">
+                    12th June, 2024
                 </div>
-                <span class="vs">VS</span>
-                <div class="away-team">
-                    <img src="./assets/images/team01.png" alt="Away team logo" class="team-logo">
-                    <p class="team-name">Manchester City</p>
+                <div class="teams">
+                    <div class="team">
+                        <p class="team_name right">Manchester City</p>
+                        <img src="./assets/images/team01.png" alt="Home team logo" class="team_logo">
+                    </div>
+                    <span class="match-time">23:45 GMT</span>
+                    <div class="team">
+                        <img src="./assets/images/team01.png" alt="Away team logo" class="team_logo">
+                        <p class="team_name">Manchester City</p>
+                    </div>
                 </div>
             </div>
         </section>

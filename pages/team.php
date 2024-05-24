@@ -1,6 +1,6 @@
 <?php include '../includes/header.php' ?>
 <main id="team">
-    <h2 class="heading">Team</h2>
+    <h2>Team</h2>
 
     <div class="players-container">
         <h2>Goalkeepers</h2>
