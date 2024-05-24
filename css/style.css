@@ -542,32 +542,47 @@ i.fa-xmark {
 footer {
   background-color: var(--primary);
   margin-top: 15px;
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-footer .left,
-footer .right {
-  padding: 20px 0;
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .footer-logo {
-  width: 100px;
+  width: 50px;
   cursor: pointer;
 }
 
+.social {
+  display: flex;
+  align-items: center;
+}
+
 .footer-links {
-  padding-top: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
   color: var(--textWhite);
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-links a {
   color: var(--textWhite);
 }
 
-.footer-links li:not(:last-child) {
-  margin-bottom: 5px;
+.footer-links a:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .social i:not(:last-child) {

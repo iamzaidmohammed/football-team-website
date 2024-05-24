@@ -13,13 +13,13 @@
 
     <nav>
         <div class="logo-container">
-            <img src="./assets/images/team01.png" alt="Team Logo" class="logo" />
+            <a href="index.php"><img src="./assets/images/team01.png" alt="Team Logo" class="logo" /></a>
         </div>
         <i class="fa-solid fa-bars"></i>
         <i class="fa-solid fa-xmark"></i>
         <div class="menu">
             <ul class="links">
-                <li class="link"><a href="#" class="active">Home</a></li>
+                <li class="link"><a href="#">Home</a></li>
                 <li class="link"><a href="./pages/about.php">About</a></li>
                 <li class="link"><a href="./pages/team.php">Team</a></li>
                 <li class="link"><a href="./pages/matches/fixtures.php">Matches</a></li>
@@ -72,24 +72,31 @@
     </main>
 
     <footer>
-        <div class="left">
-            <div class="logo-container">
-                <img src="./assets/images/team01.png" alt="Team Logo" class="footer-logo" />
+        <div class="top">
+            <div class="footer-logo">
+                <div class="logo-container">
+                    <img src="./assets/images/team01.png" alt="Team Logo" class="footer-logo" />
+                </div>
             </div>
-        </div>
-        <div class="right">
+
             <div class="social">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-x-twitter"></i>
             </div>
+        </div>
 
-            <ul class="footer-links">
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+
+        <div class="footer-links">
+            <div class="left">
+                <a href="#">Gallery</a>
+            </div>
+            <div class="right">
+                <a href="#">FAQs</a>
+                <a href="#">Privacy Policy</a>
+                <a href="./pages/contact.php">Contact Us</a>
+            </div>
         </div>
     </footer>
 

@@ -13,7 +13,7 @@
 
     <nav>
         <div class="logo-container">
-            <img src="../../assets/images/team01.png" alt="Team Logo" class="logo" />
+            <a href="../../index.php"><img src="../../assets/images/team01.png" alt="Team Logo" class="logo" /></a>
         </div>
         <i class="fa-solid fa-bars"></i>
         <i class="fa-solid fa-xmark"></i>
