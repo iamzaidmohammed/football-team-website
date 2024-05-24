@@ -413,6 +413,10 @@ i.fa-xmark {
   font-weight: 700;
 }
 
+.score {
+  font-weight: 700;
+}
+
 .teams {
   display: flex;
   align-items: center;
@@ -425,7 +429,7 @@ i.fa-xmark {
   justify-content: space-between;
 }
 
-.team img {
+.team_logo {
   margin: 0 20px;
   width: 32px;
 }
@@ -652,6 +656,15 @@ footer .right {
   #contact {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  /* Team */
+  .team_name {
+    font-size: 18px;
+  }
+
+  .team_logo {
+    width: 42px;
   }
 
   /* Footer */
