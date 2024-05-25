@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Bai+Jamjuree:wght@400,600&display=swap");
+
+:root {
+  --primary: #ff6138;
+  --secondary: #79bd8f;
+  --textWhite: #e6e6e6;
+  --textBlack: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree";
+  list-style: none;
+  text-decoration: none;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main";
+  grid-template-columns: 50px 1fr 1fr;
+}
+
+/* Navbar */
+nav {
+  grid-area: header;
+  background-color: var(--primary);
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+}
+
+.logo-container p {
+  font-size: 32px;
+  color: var(--textWhite);
+  margin-left: 10px;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary);
+}
+
+.link {
+  width: 50px;
+}
+
+.link a {
+  display: flex;
+  font-size: 22px;
+  padding: 20px 10px;
+  color: var(--textWhite);
+  transition: all 0.3s ease;
+  /* width: 100%; */
+  /* background-color: red; */
+}
+
+.link a:hover {
+  background-color: var(--secondary);
+  color: var(--textBlack);
+}
+
+.link a p {
+  display: none;
+}
+
+/* Dashboard */
+#dashboard {
+  grid-area: main;
+  /* padding-top: 75px;
+  padding-left: 75px; */
+}
+
+/* Tablet view */
+@media only screen and (min-width: 768px) {
+  /* #sidebar {
+    width: 300px;
+  } */
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1024px) {
+  body {
+    grid-template-columns: 300px 1fr 1fr;
+  }
+
+  #sidebar {
+    width: 300px;
+  }
+
+  .link {
+    width: 300px;
+  }
+
+  .link a {
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+  }
+
+  .link a p {
+    margin-left: 20px;
+    display: block;
+  }
+}
