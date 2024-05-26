@@ -109,7 +109,7 @@ nav {
 }
 
 /* Dashboard */
-#dashboard {
+main {
   grid-area: main;
 }
 
@@ -219,6 +219,61 @@ nav {
   width: 32px;
 }
 
+/* Squad */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  position: relative;
+  width: 200px;
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 100%;
+}
+
+.search-bar i {
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px;
+  transform: translateY(-50%);
+}
+
+.add-player {
+  margin-left: 20px;
+  padding: 5px;
+  color: var(--textWhite);
+  background-color: var(--primary);
+}
+
+.main-content {
+  overflow-y: scroll;
+}
+
+.main-content::-webkit-scrollbar {
+  height: 6px;
+}
+
+.main-content table {
+  border-spacing: 20px 5px;
+}
+
+.main-content table thead {
+  text-align: left;
+}
+
+.main-content table tbody {
+  text-align: center;
+}
+
 /* Tablet view */
 @media only screen and (min-width: 768px) {
   #dashboard .container {
@@ -253,6 +308,10 @@ nav {
   .games-overview,
   .top-scorer {
     padding: 20px 30px;
+  }
+
+  .main-content table {
+    border-spacing: 40px 15px;
   }
 }
 
