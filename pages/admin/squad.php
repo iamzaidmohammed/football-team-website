@@ -17,7 +17,6 @@
                     <i class="fa-solid fa-plus"></i>
                 </a>
             </div>
-
         </div>
 
         <div class="main-content">

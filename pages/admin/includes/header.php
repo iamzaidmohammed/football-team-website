@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="body">
     <nav>
         <div class="logo-container">
             <a href="./dashboard.php"><img src="../../assets/images/team01.png" alt="Team Logo" class="logo" /></a>

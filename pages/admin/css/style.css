@@ -29,7 +29,7 @@
   background: var(--primary);
 }
 
-body {
+#body {
   display: grid;
   grid-template-areas:
     "header header header"
@@ -108,6 +108,66 @@ nav {
   display: none;
 }
 
+/* Login */
+.login-content > .vector {
+  display: none;
+}
+
+.login-form {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.login-form h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.login-form .fields {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 35px;
+  outline: none;
+}
+
+.login-form input:focus {
+  border: 2px solid var(--primary);
+}
+
+.login-form input[type="submit"] {
+  padding: unset;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid black;
+  /* border: 1px solid var(--primary); */
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: var(--primary);
+  color: var(--textWhite);
+  border: 1px solid var(--primary);
+}
+
+.fields i {
+  /* background-color: red; */
+  padding: 10px;
+  position: absolute;
+  left: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+}
+
 /* Dashboard */
 main {
   grid-area: main;
@@ -122,7 +182,6 @@ main {
   width: 100%;
   height: 100%;
   padding: 10px;
-  /* background-color: red; */
 }
 
 .upcoming-match,
@@ -432,7 +491,7 @@ main {
 
 /* Desktop view */
 @media only screen and (min-width: 1024px) {
-  body {
+  #body {
     grid-template-columns: 300px 1fr 1fr;
   }
 
@@ -454,5 +513,32 @@ main {
   .link a p {
     margin-left: 20px;
     display: block;
+  }
+
+  .login-content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* place-content: center; */
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+
+  .login-content .vector {
+    display: unset;
+    flex: 0.49;
+    width: 50%;
+  }
+
+  .vector img {
+    width: 100%;
+  }
+
+  .login-form {
+    width: unset;
+    height: unset;
+    display: grid;
+    flex: 0.49;
   }
 }
