@@ -40,7 +40,7 @@
             </a>
         </div>
         <div class="link">
-            <a href="./logout.php">
+            <a href="./php/logout.php">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 <p>log out</p>
             </a>
