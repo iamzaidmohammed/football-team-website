@@ -1,10 +1,6 @@
 <?php include './includes/header.php'; ?>
 <?php include './includes/sidebar.php'; ?>
 
-<?php
-$players = [['name' => 'Ruben Dias', 'age' => 23, 'category' => 'Defender', 'position' => 'CB', 'number' => 4, 'goals' => 2, 'assists' => 1], ['name' => 'Kyle Walker', 'age' => 23, 'category' => 'Defender', 'position' => 'CB', 'number' => 4, 'goals' => 2, 'assists' => 1]]
-?>
-
 <main id="squad">
     <div class="container">
         <div class="header">
@@ -12,7 +8,7 @@ $players = [['name' => 'Ruben Dias', 'age' => 23, 'category' => 'Defender', 'pos
                 <input type="text" name="search" id="search" placeholder="Search player">
                 <i class="fa-solid fa-search"></i>
             </div>
-            <a href="#" class="add-player">
+            <a href="#" class="add-player btn">
                 Add
                 <i class="fa-solid fa-plus"></i>
             </a>
@@ -29,6 +25,8 @@ $players = [['name' => 'Ruben Dias', 'age' => 23, 'category' => 'Defender', 'pos
                         <th>Number</th>
                         <th>Goals</th>
                         <th>Assists</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,6 +38,8 @@ $players = [['name' => 'Ruben Dias', 'age' => 23, 'category' => 'Defender', 'pos
                         <td>9</td>
                         <td>34</td>
                         <td>9</td>
+                        <td class="btn edit"><a href="#">Edit</a></td>
+                        <td class="delete btn">Delete</td>
                     </tr>
                 </tbody>
             </table>

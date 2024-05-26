@@ -18,7 +18,7 @@
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -141,8 +141,26 @@ main {
   font-weight: 700;
 }
 
+.match-time {
+  width: 40px;
+  word-wrap: break-word;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
 .score {
   font-weight: 700;
+}
+
+.match-time {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.scores {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .teams {
@@ -164,14 +182,6 @@ main {
 .team_name {
   font-size: 14px;
   font-weight: 700;
-}
-
-.match-time {
-  width: 40px;
-  word-wrap: break-word;
-  text-align: center;
-  font-weight: 700;
-  font-size: 15px;
 }
 
 .games-overview {
@@ -247,31 +257,85 @@ main {
   transform: translateY(-50%);
 }
 
-.add-player {
+.btn {
   margin-left: 20px;
   padding: 5px;
   color: var(--textWhite);
   background-color: var(--primary);
 }
 
-.main-content {
+#squad .main-content {
   overflow-y: scroll;
 }
 
-.main-content::-webkit-scrollbar {
+#squad .main-content::-webkit-scrollbar {
   height: 6px;
 }
 
-.main-content table {
+#squad .main-content table {
   border-spacing: 20px 5px;
 }
 
-.main-content table thead {
+#squad .main-content table thead {
   text-align: left;
 }
 
-.main-content table tbody {
+#squad .main-content table tbody {
   text-align: center;
+}
+
+.edit {
+  background-color: var(--secondary);
+}
+.edit a {
+  color: var(--textBlack);
+}
+
+.delete {
+  background-color: red;
+  cursor: pointer;
+}
+
+/* Matches */
+#matches .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.fixtures,
+.results {
+  flex: 0.49;
+  text-align: center;
+}
+
+.fixtures h2,
+.results h2 {
+  margin-bottom: 20px;
+}
+
+.fixtures .match,
+.results .match {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.fixtures .match:not(:last-child),
+.results .match:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.fixtures .teams,
+.results .teams {
+  margin-bottom: 20px;
+}
+
+.btns {
+  padding-bottom: 20px;
 }
 
 /* Tablet view */
@@ -310,8 +374,13 @@ main {
     padding: 20px 30px;
   }
 
-  .main-content table {
+  #squad .main-content table {
     border-spacing: 40px 15px;
+  }
+
+  #matches .main-content {
+    flex-direction: row;
+    align-items: start;
   }
 }
 
