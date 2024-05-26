@@ -16,7 +16,8 @@
         </div>
         <div class="login-form">
             <h2>Welcome admin</h2>
-            <form action="" method="POST">
+            <form action="./php/adminLogin.php" method="POST">
+                <div class="error-message">sdfds</div>
                 <div class="fields">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" name="username" id="username" placeholder="Username">
@@ -32,6 +33,8 @@
         </div>
 
     </section>
+
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
