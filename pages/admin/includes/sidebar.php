@@ -7,25 +7,25 @@
             </a>
         </div>
         <div class="link">
-            <a href="./dashboard.php">
+            <a href="./squad.php">
                 <i class="fa-solid fa-users"></i>
                 <p>Squad</p>
             </a>
         </div>
         <div class="link">
-            <a href="./dashboard.php">
+            <a href="./statistics.php">
                 <i class="fa-solid fa-chart-simple"></i>
                 <p>Statistics</p>
             </a>
         </div>
         <div class="link">
-            <a href="./dashboard.php">
+            <a href="./league.php">
                 <i class="fa-solid fa-trophy"></i>
                 <p>League</p>
             </a>
         </div>
         <div class="link">
-            <a href="./dashboard.php">
+            <a href="./matches.php">
                 <i class="fa-solid fa-futbol"></i>
                 <p>Matches</p>
             </a>
@@ -34,13 +34,13 @@
 
     <div class="bottom-links">
         <div class="link">
-            <a href="./dashboard.php">
+            <a href="./settings.php">
                 <i class="fa-solid fa-cog"></i>
                 <p>Settings</p>
             </a>
         </div>
         <div class="link">
-            <a href="./dashboard.php">
+            <a href="./logout.php">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 <p>log out</p>
             </a>
