@@ -2,6 +2,7 @@
 <?php include './includes/sidebar.php'; ?>
 
 <main id="dashboard">
+    <h2>Dashboard</h2>
     <div class="container">
         <div class="upcoming-match">
             <h2>Upcoming Match</h2>

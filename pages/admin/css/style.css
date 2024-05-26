@@ -113,6 +113,11 @@ main {
   grid-area: main;
 }
 
+#dashboard > h2 {
+  padding: 10px;
+  font-size: 42px;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -233,8 +238,20 @@ main {
 .header {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
+  width: 100%;
   margin-bottom: 40px;
+  padding: 20px;
+}
+
+.header .left h2 {
+  font-size: 42px;
+}
+
+.header .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .search-bar {
@@ -262,6 +279,7 @@ main {
   padding: 5px;
   color: var(--textWhite);
   background-color: var(--primary);
+  cursor: pointer;
 }
 
 #squad .main-content {
@@ -336,6 +354,34 @@ main {
 
 .btns {
   padding-bottom: 20px;
+}
+
+/* Settings */
+#settings h2 {
+  font-size: 42px;
+}
+
+#settings .main-content {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.username,
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--textBlack);
+  padding: 10px;
+}
+
+.password {
+  border-bottom: 1px solid var(--textBlack);
+}
+
+.username p,
+.password p {
+  font-size: 18px;
 }
 
 /* Tablet view */

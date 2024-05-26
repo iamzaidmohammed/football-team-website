@@ -4,14 +4,20 @@
 <main id="squad">
     <div class="container">
         <div class="header">
-            <div class="search-bar">
-                <input type="text" name="search" id="search" placeholder="Search player">
-                <i class="fa-solid fa-search"></i>
+            <div class="left">
+                <h2>Squad</h2>
             </div>
-            <a href="#" class="add-player btn">
-                Add
-                <i class="fa-solid fa-plus"></i>
-            </a>
+            <div class="right">
+                <div class="search-bar">
+                    <input type="text" name="search" id="search" placeholder="Search player">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+                <a href="#" class="add-player btn">
+                    Add
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
+
         </div>
 
         <div class="main-content">
