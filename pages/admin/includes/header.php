@@ -1,4 +1,11 @@
 <?php session_start(); ?>
+<?php include_once '../../config/db.php'; ?>
+
+<?php
+if (!isset($_SESSION['username'])) {
+    header('Location: index.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

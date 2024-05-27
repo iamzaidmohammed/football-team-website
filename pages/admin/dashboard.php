@@ -1,13 +1,6 @@
 <?php include './includes/header.php'; ?>
 <?php include './includes/sidebar.php'; ?>
 
-<?php
-if (!isset($_SESSION['username'])) {
-    header('Location: index.php');
-}
-
-?>
-
 <main id="dashboard">
     <h2>Dashboard</h2>
     <div class="container">

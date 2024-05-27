@@ -17,7 +17,7 @@
         <div class="login-form">
             <h2>Welcome admin</h2>
             <form action="./php/adminLogin.php" method="POST">
-                <div class="error-message">sdfds</div>
+                <div class="error-message"></div>
                 <div class="fields">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" name="username" id="username" placeholder="Username">

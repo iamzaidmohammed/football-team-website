@@ -41,10 +41,15 @@
 nav,
 #sidebar {
   position: fixed;
+  z-index: 13;
 }
 
 main {
   margin-top: 64px;
+}
+
+i {
+  cursor: pointer;
 }
 
 /* Navbar */
@@ -423,6 +428,10 @@ main {
 }
 
 /* Settings */
+#settings {
+  position: relative;
+}
+
 #settings h2 {
   font-size: 42px;
 }
@@ -430,6 +439,8 @@ main {
 #settings .main-content {
   margin-top: 20px;
   padding: 20px;
+  z-index: -1;
+  /* display: none; */
 }
 
 .username,
@@ -439,6 +450,7 @@ main {
   justify-content: space-between;
   border-top: 1px solid var(--textBlack);
   padding: 10px;
+  z-index: -3;
 }
 
 .password {
@@ -448,6 +460,102 @@ main {
 .username p,
 .password p {
   font-size: 18px;
+}
+
+#settings .change-username,
+#settings .change-password {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#settings .change-username {
+  display: none;
+}
+
+#settings .change-password {
+  display: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 90vh;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+  position: relative;
+}
+
+#settings .change {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.change form header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.change form {
+  background-color: white;
+  width: 300px;
+  padding: 15px 20px;
+  box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  /* transform: translateY(-50%); */
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.change div {
+  display: flex;
+  flex-direction: column;
+}
+
+.change input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--textBlack);
+}
+
+.change input:focus {
+  border: 1px solid var(--secondary);
+}
+
+.change input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.change input[type="submit"]:hover {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.change-password .password-fields {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.password-fields i {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
 }
 
 /* Tablet view */
