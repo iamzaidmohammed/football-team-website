@@ -130,7 +130,7 @@ nav {
   margin-bottom: 40px;
 }
 
-.login-form .error-message {
+.error-message {
   text-align: center;
   color: red;
   margin-bottom: 20px;

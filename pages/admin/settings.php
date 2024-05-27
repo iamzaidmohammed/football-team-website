@@ -32,14 +32,18 @@ $admin = $result->fetch_assoc();
 
         <div class="change change-username">
             <div class="overlay"></div>
-            <form action="" method="POST">
+            <form action="./php/changeUsername.php" method="POST" id="username-form">
                 <header>
                     <p>Change username</p>
                     <i class="fa-solid fa-xmark"></i>
                 </header>
+
+                <div class="error-message"></div>
+
                 <div>
                     <input type="text" name="username" id="username" placeholder="Enter new username">
-                    <input type="submit" name="edit-username" id="submit" value="Change username">
+
+                    <input type="submit" name="edit-username" id="change-username" value="Change username">
                 </div>
             </form>
         </div>
@@ -51,6 +55,9 @@ $admin = $result->fetch_assoc();
                     <p>Change password</p>
                     <i class="fa-solid fa-xmark"></i>
                 </header>
+
+                <div class="error-message"></div>
+
                 <div class="password-fields">
                     <input type="password" name="current-password" id="current-password" placeholder="Enter current password">
                     <i class="fa-solid fa-eye"></i>
@@ -70,6 +77,7 @@ $admin = $result->fetch_assoc();
 </main>
 
 <script src="js/changeBtn.js"></script>
+<script src="js/changeUsername.js"></script>
 
 </body>
 
