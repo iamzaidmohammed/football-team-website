@@ -38,7 +38,7 @@ $admin = $result->fetch_assoc();
                     <i class="fa-solid fa-xmark"></i>
                 </header>
 
-                <div class="error-message"></div>
+                <div class="error-message" style="display: none;"></div>
 
                 <div>
                     <input type="text" name="username" id="username" placeholder="Enter new username">
@@ -50,13 +50,13 @@ $admin = $result->fetch_assoc();
 
         <div class="change change-password">
             <div class="overlay"></div>
-            <form action="" method="POST">
+            <form action="./php/changePassword.php" method="POST" id="password-form">
                 <header>
                     <p>Change password</p>
                     <i class="fa-solid fa-xmark"></i>
                 </header>
 
-                <div class="error-message"></div>
+                <div class="password-error-message" style="display: none;"></div>
 
                 <div class="password-fields">
                     <input type="password" name="current-password" id="current-password" placeholder="Enter current password">
@@ -78,6 +78,7 @@ $admin = $result->fetch_assoc();
 
 <script src="js/changeBtn.js"></script>
 <script src="js/changeUsername.js"></script>
+<script src="js/changePassword.js"></script>
 
 </body>
 

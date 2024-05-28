@@ -36,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If there's no error, check the credentials
     if (empty($error_message)) {
-        $username = $_POST['username'];
         // Example SQL query to check user credentials
         $stmt = $db_connection->prepare("UPDATE admin SET username = ?");
         $stmt->bind_param("s", $username);

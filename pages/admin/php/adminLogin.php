@@ -18,13 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If there's no error, check the credentials
     if (empty($error_message)) {
-        // Example SQL query to check user credentials
-        $stmt = $db_connection->prepare("SELECT * FROM admin WHERE username = ? AND password = ?");
-        $stmt->bind_param("ss", $username, $password);
+        // Prepare the SQL query to retrieve the hashed password
+        $stmt = $db_connection->prepare("SELECT password FROM admin WHERE username = ?");
+        $stmt->bind_param("s", $username);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt->bind_result($hashed_password);
+        $stmt->fetch();
+        $stmt->close();
 
-        if ($result->num_rows > 0) {
+        // Check if the password is correct
+        if (password_verify($password, $hashed_password)) {
             // Login successful
             $_SESSION['username'] = $username; // Storing session variable
             header('Content-Type: application/json');
