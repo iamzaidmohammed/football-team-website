@@ -35,22 +35,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Erling Haaland</td>
-                        <td>24</td>
-                        <td>Striker</td>
-                        <td>CF</td>
-                        <td>9</td>
-                        <td>34</td>
-                        <td>9</td>
-                        <td class="btn edit"><a href="#">Edit</a></td>
-                        <td class="delete btn">Delete</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
     </div>
 </main>
+
+<script src="./js/fetchPlayers.js"></script>
 </body>
 
 </html>
