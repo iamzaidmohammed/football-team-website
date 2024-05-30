@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Create a row element for each player
       const row = document.createElement("tr");
 
+      row.setAttribute("data-player-id", player.id); // each player 'id'
+
       // Create a cell for each player attribute and append to the row
       const nameCell = document.createElement("td");
       nameCell.textContent = player.name;
@@ -48,10 +50,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Create the Edit button cell
       const editCell = document.createElement("td");
       editCell.className = "btn edit";
-      const editLink = document.createElement("a");
-      editLink.href = "#";
-      editLink.textContent = "Edit";
-      editCell.appendChild(editLink);
+      editCell.textContent = "Edit";
+      editCell.addEventListener("click", () => populateEditForm(player)); // Add click event listener
+
       row.appendChild(editCell);
 
       // Create the Delete button cell
@@ -63,6 +64,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Append the row to the tbody
       tbody.appendChild(row);
     });
+
+    // Call the function to initialize edit functionality
+    initializeEditPlayerFunctionality();
   } catch (error) {
     console.error("Error fetching players:", error);
   }

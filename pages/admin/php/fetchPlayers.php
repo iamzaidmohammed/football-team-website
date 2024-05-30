@@ -1,17 +1,18 @@
 <?php
 include_once '../../../config/db.php';
 
-$stmt = $db_connection->prepare("SELECT player_name, player_age, player_category, player_position, player_number, player_goals, player_assists FROM players");
+$stmt = $db_connection->prepare("SELECT id, player_name, player_age, player_category, player_position, player_number, player_goals, player_assists FROM players");
 
 if ($stmt) {
     $stmt->execute();
 
     // Bind each column to a variable
-    $stmt->bind_result($name, $age, $category, $position, $number, $goals, $assists);
+    $stmt->bind_result($id, $name, $age, $category, $position, $number, $goals, $assists);
 
     $players = [];
     while ($stmt->fetch()) {
         $players[] = [
+            'id' => $id,
             'name' => $name,
             'age' => $age,
             'category' => $category,

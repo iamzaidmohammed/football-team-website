@@ -385,6 +385,97 @@ main {
   cursor: pointer;
 }
 
+/* Edit player form */
+.edit-player-container {
+  width: 100%;
+  height: 100%;
+  /* margin: auto; */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.edit-player-container .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+  position: relative;
+}
+
+#edit-player-form {
+  background-color: white;
+  width: 70%;
+  margin-left: 30px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 100px;
+  /* left: 100px; */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+#edit-player-form header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#edit-player-form .edit-player-error-message {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.edit-fields {
+  /* background-color: wheat; */
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-fields label {
+  margin-bottom: 5px;
+}
+
+.edit-fields input,
+.edit-fields select {
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--textBlack);
+  margin-bottom: 10px;
+}
+
+.edit-fields input:focus,
+.edit-fields select:focus {
+  border: 1px solid var(--secondary);
+}
+
+.edit-fields select {
+  cursor: pointer;
+}
+
+#edit-player-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--textBlack);
+}
+
+#edit-player-form input[type="submit"]:hover {
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary);
+}
+
 /* Matches */
 #matches .main-content {
   display: flex;
@@ -477,7 +568,7 @@ main {
   display: none;
 }
 
-.overlay {
+#settings .overlay {
   width: 100%;
   height: 90vh;
   background-color: black;
@@ -598,6 +689,48 @@ main {
     border-spacing: 40px 15px;
   }
 
+  /* Edit player container */
+  #edit-player-form .edit-inputs {
+    display: grid;
+    grid-template-areas:
+      "name name"
+      "age category"
+      "position number"
+      "goals assists";
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  .player-name {
+    grid-area: name;
+  }
+
+  .player-age {
+    grid-area: age;
+  }
+
+  .player-category {
+    grid-area: category;
+  }
+
+  .player-position {
+    grid-area: position;
+  }
+
+  .player-number {
+    grid-area: number;
+  }
+
+  .player-goals {
+    grid-area: goals;
+  }
+
+  .player-assists {
+    grid-area: assists;
+  }
+
+  /* Matches page */
   #matches .main-content {
     flex-direction: row;
     align-items: start;
@@ -655,5 +788,11 @@ main {
     height: unset;
     display: grid;
     flex: 0.49;
+  }
+
+  /* Edit player container */
+  #edit-player-form {
+    width: 50%;
+    margin-left: 150px;
   }
 }
