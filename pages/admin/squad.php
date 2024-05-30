@@ -40,7 +40,7 @@
             </table>
         </div>
 
-        <!-- Edit player -->
+        <!-- Edit player form -->
         <div class="edit-player-container" style="display: none;">
             <div class="overlay"></div>
             <form action="./php/editPlayer.php" method="POST" id="edit-player-form">
@@ -112,10 +112,25 @@
                 <input type="submit" name="edit-player" id="edit-player" value="Edit Player">
             </form>
         </div>
+
+        <!-- Confirm delete player container -->
+        <div class="confirm-delete-player" style="display: none;">
+            <div class="overlay"></div>
+            <div class="confirm-delete">
+                <header>
+                    <h2>Are you sure you want to delete <span class="player-delete-name">Jamal Musiala</span>?</h2>
+                </header>
+                <div class="confirm">
+                    <button name="yes" class="yes">Yes</button>
+                    <button name="no" class="no">No</button>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
 <script src="./js/editPlayer.js"></script>
+<script src="./js/deletePlayer.js"></script>
 <script src="./js/fetchPlayers.js"></script>
 </body>
 

@@ -306,6 +306,10 @@ main {
 }
 
 /* Squad */
+#squad {
+  position: relative;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -389,16 +393,14 @@ main {
 .edit-player-container {
   width: 100%;
   height: 100%;
-  /* margin: auto; */
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
 }
 
 .edit-player-container .overlay {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 68px);
   background-color: black;
   opacity: 0.3;
   z-index: 1;
@@ -408,14 +410,12 @@ main {
 #edit-player-form {
   background-color: white;
   width: 70%;
-  margin-left: 30px;
   padding: 10px 20px;
   position: absolute;
   top: 100px;
-  /* left: 100px; */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 20;
+  z-index: 2;
 }
 
 #edit-player-form header {
@@ -474,6 +474,67 @@ main {
 #edit-player-form input[type="submit"]:hover {
   border: 1px solid var(--secondary);
   background-color: var(--secondary);
+}
+
+/* Confirm Delete Player */
+.confirm-delete-player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.confirm-delete-player .overlay {
+  width: 100%;
+  height: calc(100vh - 68px);
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+  position: relative;
+}
+
+.confirm-delete-player .confirm-delete {
+  background-color: white;
+  width: 300px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 30px 20px;
+}
+
+.confirm-delete header {
+  margin-bottom: 20px;
+}
+
+.confirm-delete-player .confirm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirm-delete-player button {
+  width: 49%;
+  padding: 10px;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.confirm .yes {
+  border: 1px solid red;
+  background-color: red;
+  color: var(--textWhite);
+}
+
+.confirm .no {
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary);
+  color: var(--textWhite);
 }
 
 /* Matches */
@@ -790,9 +851,7 @@ main {
     flex: 0.49;
   }
 
-  /* Edit player container */
-  #edit-player-form {
-    width: 50%;
-    margin-left: 150px;
+  .confirm-delete-player .confirm-delete {
+    width: 400px;
   }
 }

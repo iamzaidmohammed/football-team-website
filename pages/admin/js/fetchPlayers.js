@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Call the function to initialize edit functionality
     initializeEditPlayerFunctionality();
+    initializeDeletePlayerFunctionality();
   } catch (error) {
     console.error("Error fetching players:", error);
   }
