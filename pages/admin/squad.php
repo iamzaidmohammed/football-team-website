@@ -118,12 +118,13 @@
             <div class="overlay"></div>
             <div class="confirm-delete">
                 <header>
-                    <h2>Are you sure you want to delete <span class="player-delete-name">Jamal Musiala</span>?</h2>
+                    <h2>Are you sure you want to delete <span class="player-delete-name"></span>?</h2>
                 </header>
-                <div class="confirm">
+                <form action="./php/deletePlayer.php" method="POST" class="confirm">
+                    <input type="hidden" name="delete-player-id" id="delete-player-id">
                     <button name="yes" class="yes">Yes</button>
-                    <button name="no" class="no">No</button>
-                </div>
+                    <span class="no">No</span>
+                </form>
             </div>
         </div>
     </div>

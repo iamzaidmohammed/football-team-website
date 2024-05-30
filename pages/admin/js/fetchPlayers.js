@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const deleteCell = document.createElement("td");
       deleteCell.className = "delete btn";
       deleteCell.textContent = "Delete";
+      deleteCell.addEventListener("click", () => identifyPlayer(player)); // Add click event listener
       row.appendChild(deleteCell);
 
       // Append the row to the tbody

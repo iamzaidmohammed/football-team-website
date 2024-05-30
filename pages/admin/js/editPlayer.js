@@ -28,7 +28,6 @@ function populateEditForm(player) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const editPlayerForm = document.querySelector("#edit-player-form");
-  // const btn = editPlayerForm.querySelector("#edit-player");
   const error = document.querySelector(".edit-player-error-message");
 
   editPlayerForm.addEventListener("submit", async (event) => {
