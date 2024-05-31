@@ -1,7 +1,7 @@
 function initializeEditPlayerFunctionality() {
   const formContainer = document.querySelector(".edit-player-container");
   const editBtn = document.querySelectorAll(".edit");
-  const closeBtn = document.querySelector(".fa-xmark");
+  const closeBtn = document.querySelector(".edit-close");
 
   // Add your event listeners for edit buttons here
   editBtn.forEach((button) => {

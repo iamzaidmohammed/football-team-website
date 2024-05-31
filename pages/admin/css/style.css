@@ -386,7 +386,8 @@ main {
 }
 
 /* Edit player form */
-.edit-player-container {
+.edit-player-container,
+.add-player-container {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -394,7 +395,8 @@ main {
   left: 0;
 }
 
-.edit-player-container .overlay {
+.edit-player-container .overlay,
+.add-player-container .overlay {
   width: 100%;
   height: calc(100vh - 68px);
   background-color: black;
@@ -403,7 +405,8 @@ main {
   position: relative;
 }
 
-#edit-player-form {
+#edit-player-form,
+#add-player-form {
   background-color: white;
   width: 70%;
   padding: 10px 20px;
@@ -414,7 +417,8 @@ main {
   z-index: 2;
 }
 
-#edit-player-form header {
+#edit-player-form header,
+#add-player-form header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -423,24 +427,29 @@ main {
   margin-bottom: 20px;
 }
 
-#edit-player-form .edit-player-error-message {
+#edit-player-form .edit-player-error-message,
+#add-player-form .add-player-error-message {
   text-align: center;
   font-size: 18px;
   color: red;
   margin-bottom: 20px;
 }
 
-.edit-fields {
+.edit-fields,
+.add-fields {
   display: flex;
   flex-direction: column;
 }
 
-.edit-fields label {
+.edit-fields label,
+.add-fields label {
   margin-bottom: 5px;
 }
 
 .edit-fields input,
-.edit-fields select {
+.edit-fields select,
+.add-fields input,
+.add-fields select {
   padding: 10px;
   outline: none;
   border: 1px solid var(--textBlack);
@@ -448,15 +457,19 @@ main {
 }
 
 .edit-fields input:focus,
-.edit-fields select:focus {
+.edit-fields select:focus,
+.add-fields input:focus,
+.add-fields select:focus {
   border: 1px solid var(--secondary);
 }
 
-.edit-fields select {
+.edit-fields select,
+.add-fields select {
   cursor: pointer;
 }
 
-#edit-player-form input[type="submit"] {
+#edit-player-form input[type="submit"],
+#add-player-form input[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -466,7 +479,8 @@ main {
   border: 1px solid var(--textBlack);
 }
 
-#edit-player-form input[type="submit"]:hover {
+#edit-player-form input[type="submit"]:hover,
+#add-player-form input[type="submit"]:hover {
   border: 1px solid var(--secondary);
   background-color: var(--secondary);
 }
@@ -745,7 +759,8 @@ main {
   }
 
   /* Edit player container */
-  #edit-player-form .edit-inputs {
+  #edit-player-form .edit-inputs,
+  #add-player-form .add-inputs {
     display: grid;
     grid-template-areas:
       "name name"
