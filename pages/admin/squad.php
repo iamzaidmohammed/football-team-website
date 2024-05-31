@@ -51,22 +51,20 @@
 
                 <div class="add-player-error-message" style="display: none;"></div>
 
-                <input type="hidden" name="player-id" id="player-id" value="">
-
                 <div class="add-inputs">
                     <div class=" add-fields player-name">
-                        <label for="player-name">Name</label>
-                        <input type="text" name="player-name" id="player-name">
+                        <label for="add-player-name">Name</label>
+                        <input type="text" name="add-player-name" id="add-player-name">
                     </div>
 
                     <div class="add-fields player-age">
-                        <label for="player-age">Age</label>
-                        <input type="number" name="player-age" id="player-age">
+                        <label for="add-player-age">Age</label>
+                        <input type="number" name="add-player-age" id="add-player-age">
                     </div>
 
                     <div class="add-fields player-category">
-                        <label for="player-category">Category</label>
-                        <select name="player-category" id="player-category">
+                        <label for="add-player-category">Category</label>
+                        <select name="add-player-category" id="add-player-category">
                             <option value="empty">--- Select player category ---</option>
                             <option value="Goalkeeper">Goalkeeper</option>
                             <option value="Defender">Defender</option>
@@ -76,8 +74,8 @@
                     </div>
 
                     <div class="add-fields player-position">
-                        <label for="player-position">Position</label>
-                        <select name="player-position" id="player-position">
+                        <label for="add-player-position">Position</label>
+                        <select name="add-player-position" id="add-player-position">
                             <option value="empty">--- Select player position ---</option>
                             <option value="GK">GK</option>
                             <option value="RB">RB</option>
@@ -94,18 +92,18 @@
                     </div>
 
                     <div class="add-fields player-number">
-                        <label for="player-number">Number</label>
-                        <input type="number" name="player-number" id="player-number">
+                        <label for="add-player-number">Number</label>
+                        <input type="number" name="add-player-number" id="add-player-number">
                     </div>
 
                     <div class="add-fields player-goals">
-                        <label for="player-goals">Goals</label>
-                        <input type="number" name="player-goals" id="player-goals">
+                        <label for="add-player-goals">Goals</label>
+                        <input type="number" name="add-player-goals" id="add-player-goals">
                     </div>
 
                     <div class="add-fields player-assists">
-                        <label for="player-assists">Assists</label>
-                        <input type="number" name="player-assists" id="player-assists">
+                        <label for="add-player-assists">Assists</label>
+                        <input type="number" name="add-player-assists" id="add-player-assists">
                     </div>
                 </div>
 
