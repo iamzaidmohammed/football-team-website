@@ -11,6 +11,7 @@
                 <div class="search-bar">
                     <input type="text" name="search" id="search" placeholder="Search player">
                     <i class="fa-solid fa-search"></i>
+                    <i class="fa-solid fa-xmark close-search"></i>
                 </div>
                 <span class="add-player btn">
                     Add
@@ -201,6 +202,7 @@
     </div>
 </main>
 
+<script src="./js/searchPlayer.js"></script>
 <script src="./js/addPlayer.js"></script>
 <script src="./js/editPlayer.js"></script>
 <script src="./js/deletePlayer.js"></script>

@@ -313,6 +313,7 @@ main {
   width: 100%;
   margin-bottom: 40px;
   padding: 20px;
+  position: relative;
 }
 
 .header .left h2 {
@@ -322,27 +323,60 @@ main {
 .header .right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .search-bar {
   position: relative;
-  width: 200px;
+  /* width: 200px; */
+}
+
+.search-bar.search {
+  width: 70%;
+  /* background-color: red; */
+  /* display: unset; */
+  position: absolute;
+  left: 5px;
+  z-index: 0.4;
 }
 
 .search-bar input {
   padding: 5px;
   width: 100%;
+  outline: none;
+  border: 2px solid var(--textBlack);
+  display: none;
+}
+
+.search-bar input:focus {
+  border: 2px solid var(--secondary);
+}
+
+.search-bar input.show {
+  display: unset;
+  padding: 15px;
 }
 
 .search-bar i {
   position: absolute;
-  right: 1px;
+  right: 2px;
   top: 50%;
   cursor: pointer;
   background-color: white;
   padding: 5px;
   transform: translateY(-50%);
+}
+
+.search-bar i.hide {
+  display: none;
+}
+
+.close-search {
+  display: none;
+}
+
+.close-search.show {
+  display: unset;
 }
 
 .btn {
@@ -371,6 +405,10 @@ main {
 
 #squad .main-content table tbody {
   text-align: center;
+}
+
+#squad .main-content table tbody .name-cell {
+  text-align: left;
 }
 
 .edit {
@@ -719,6 +757,24 @@ main {
   background-color: white;
 }
 
+@media only screen and (min-width: 490px) {
+  .search-bar.search {
+    width: unset;
+    position: unset;
+    z-index: 0.4;
+  }
+
+  .search-bar input {
+    border: 1px solid var(--textBlack);
+    display: unset;
+    padding: 10px;
+  }
+
+  .search-bar input:focus {
+    border: 1px solid var(--secondary);
+  }
+}
+
 /* Tablet view */
 @media only screen and (min-width: 768px) {
   #dashboard .container {
@@ -752,6 +808,11 @@ main {
   .games-overview,
   .top-scorer {
     padding: 20px 30px;
+  }
+
+  /* Squad Page */
+  .search-bar {
+    width: 300px;
   }
 
   #squad .main-content table {
