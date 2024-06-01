@@ -1,18 +1,69 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    // Send a GET request to the PHP script
-    const response = await fetch("php/fetchPlayers.php");
+const searchIcon = document.querySelector(".fa-search");
+const searchField = document.querySelector("#search-player");
+const searchBar = document.querySelector(".search-bar");
+const closeSearch = document.querySelector(".close-search");
 
-    // Parse the JSON response
-    const players = await response.json();
+searchIcon.addEventListener("click", () => {
+  searchIcon.classList.add("hide");
+  searchBar.classList.add("search");
+  searchField.classList.add("show");
+  closeSearch.classList.add("show");
+  searchField.focus();
+});
 
-    // Get the tbody element
-    const tbody = document.querySelector("table tbody");
+closeSearch.addEventListener("click", () => {
+  searchIcon.classList.remove("hide");
+  searchBar.classList.remove("search");
+  searchField.classList.remove("show");
+  closeSearch.classList.remove("show");
 
-    // Clear any existing rows in the tbody
-    tbody.innerHTML = "";
+  searchField.value = "";
 
-    players.forEach((player) => {
+  fetchAndDisplayPlayers();
+});
+
+let userInput = "";
+
+searchField.addEventListener("keydown", async (e) => {
+  // Send a GET request to the PHP script
+  const response = await fetch("php/fetchPlayers.php");
+
+  // Parse the JSON response
+  const players = await response.json();
+
+  // Get the tbody element
+  const tbody = document.querySelector("table tbody");
+  const table = document.querySelector("table");
+
+  // Clear any existing rows in the tbody
+  tbody.innerHTML = "";
+
+  // List of keys to ignore
+  const ignoreKeys = [
+    "Tab",
+    "Alt",
+    "Control",
+    "Shift",
+    "Meta",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "Escape",
+    "CapsLock",
+    "Enter",
+  ];
+
+  // Update userInput based on the key pressed
+  if (e.key.length === 1) {
+    // Checks if the key pressed is a single character
+    userInput += e.key;
+  } else if (e.key === "Backspace") {
+    userInput = userInput.slice(0, -1);
+  }
+
+  for (const player of players) {
+    if (player.name.toLowerCase().startsWith(userInput.toLowerCase())) {
       // Create a row element for each player
       const row = document.createElement("tr");
 
@@ -65,12 +116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Append the row to the tbody
       tbody.appendChild(row);
-    });
-
-    // Call the function to initialize edit functionality
-    initializeEditPlayerFunctionality();
-    initializeDeletePlayerFunctionality();
-  } catch (error) {
-    console.error("Error fetching players:", error);
+    }
   }
 });
+//   console.log(userInput);
