@@ -144,6 +144,11 @@ searchField.addEventListener(
         }
       }
     }
+
+    if (searchField.value.length == 0) {
+      displayAllPlayers();
+      console.log("empty");
+    }
   }, 100)
 );
 
