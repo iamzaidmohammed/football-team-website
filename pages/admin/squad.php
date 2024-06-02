@@ -202,10 +202,10 @@
     </div>
 </main>
 
-<script src="./js/searchPlayer.js"></script>
 <script src="./js/addPlayer.js"></script>
 <script src="./js/editPlayer.js"></script>
 <script src="./js/deletePlayer.js"></script>
+<script src="./js/searchPlayer.js"></script>
 <script src="./js/fetchPlayers.js"></script>
 </body>
 

@@ -113,6 +113,8 @@ function displayAllPlayers() {
   for (const player of players) {
     createPlayerRow(player);
   }
+  initializeEditPlayerFunctionality(); // Initialize edit functionality
+  initializeDeletePlayerFunctionality(); // Initialize delete functionality
 }
 
 searchField.addEventListener(
@@ -145,9 +147,11 @@ searchField.addEventListener(
       }
     }
 
+    initializeEditPlayerFunctionality(); // Initialize edit functionality
+    initializeDeletePlayerFunctionality(); // Initialize delete functionality
+
     if (searchField.value.length == 0) {
       displayAllPlayers();
-      console.log("empty");
     }
   }, 100)
 );
