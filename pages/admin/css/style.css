@@ -302,7 +302,8 @@ main {
 }
 
 /* Squad */
-#squad {
+#squad,
+#matches {
   position: relative;
 }
 
@@ -425,7 +426,8 @@ main {
 
 /* Edit player form */
 .edit-player-container,
-.add-player-container {
+.add-player-container,
+.add-match-container {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -434,7 +436,8 @@ main {
 }
 
 .edit-player-container .overlay,
-.add-player-container .overlay {
+.add-player-container .overlay,
+.add-match-container .overlay {
   width: 100%;
   height: 100vh;
   background-color: black;
@@ -444,7 +447,8 @@ main {
 }
 
 #edit-player-form,
-#add-player-form {
+#add-player-form,
+#add-match-form {
   background-color: white;
   width: 70%;
   padding: 10px 20px;
@@ -456,7 +460,8 @@ main {
 }
 
 #edit-player-form header,
-#add-player-form header {
+#add-player-form header,
+#add-match-form header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -466,7 +471,8 @@ main {
 }
 
 #edit-player-form .edit-player-error-message,
-#add-player-form .add-player-error-message {
+#add-player-form .add-player-error-message,
+#add-match-form .add-match-error-message {
   text-align: center;
   font-size: 18px;
   color: red;
@@ -507,7 +513,8 @@ main {
 }
 
 #edit-player-form input[type="submit"],
-#add-player-form input[type="submit"] {
+#add-player-form input[type="submit"],
+#add-match-form input[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -518,7 +525,8 @@ main {
 }
 
 #edit-player-form input[type="submit"]:hover,
-#add-player-form input[type="submit"]:hover {
+#add-player-form input[type="submit"]:hover,
+#add-match-form input[type="submit"]:hover {
   border: 1px solid var(--secondary);
   background-color: var(--secondary);
 }
@@ -874,6 +882,49 @@ main {
   #matches .main-content {
     flex-direction: row;
     align-items: start;
+  }
+
+  #add-match-form {
+    top: 100px;
+  }
+
+  #add-match-form .add-inputs {
+    display: grid;
+    grid-template-areas:
+      "h-name a-name"
+      "h-logo a-logo"
+      "m-date m-time";
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  #add-match-form input {
+    width: 100%;
+  }
+
+  .home-team-name {
+    grid-area: h-name;
+  }
+
+  .away-team-name {
+    grid-area: a-name;
+  }
+
+  .home-team-logo {
+    grid-area: h-logo;
+  }
+
+  .away-team-logo {
+    grid-area: a-logo;
+  }
+
+  .add-match-date {
+    grid-area: m-date;
+  }
+
+  .add-match-time {
+    grid-area: m-time;
   }
 }
 
