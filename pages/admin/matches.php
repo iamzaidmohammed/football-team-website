@@ -22,27 +22,7 @@
         <div class="main-content">
             <div class="fixtures">
                 <h2>Upcoming Matches</h2>
-                <div class="match">
-                    <div class="match-date">
-                        12th June, 2024
-                    </div>
-                    <div class="teams">
-                        <div class="team">
-                            <img src="../../assets/images/team01.png" alt="Home team logo" class="team_logo">
-                            <p class="team_name right">Manchester City</p>
-                        </div>
-                        <span class="match-time">23:45 GMT</span>
-                        <div class="team">
-                            <img src="../../assets/images/team01.png" alt="Away team logo" class="team_logo">
-                            <p class="team_name">Manchester City</p>
-                        </div>
-                    </div>
-                    <div class="btns">
-                        <span class="edit btn">Edit</span>
-                        <span class="update btn">Update</span>
-                        <span class="delete btn">Delete</span>
-                    </div>
-                </div>
+
             </div>
             <div class="results">
                 <h2>Past Matches</h2>
@@ -120,6 +100,7 @@
 </main>
 
 <script src="./js/addMatch.js"></script>
+<script src="./js/fetchMatches.js"></script>
 </body>
 
 </html>
