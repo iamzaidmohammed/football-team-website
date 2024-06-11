@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const editBtn = document.createElement("span");
       editBtn.classList.add("edit", "btn");
       editBtn.textContent = "Edit";
+      editBtn.addEventListener("click", () => populateEditForm(match));
       btnsDiv.appendChild(editBtn);
 
       const updateBtn = document.createElement("span");
@@ -90,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     // Call the function to initialize edit functionality
-    // initializeEditMatchFunctionality();
+    initializeEditMatchFunctionality();
     // initializeUpdateMatchFunctionality();
     // initializeDeleteMatchFunctionality();
   } catch (error) {
