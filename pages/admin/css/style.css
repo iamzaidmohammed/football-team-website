@@ -228,6 +228,7 @@ main {
 .match-time {
   margin-left: 20px;
   margin-right: 20px;
+  width: 50px;
 }
 
 .scores {
@@ -539,7 +540,8 @@ main {
 }
 
 /* Confirm Delete Player */
-.confirm-delete-player {
+.confirm-delete-player,
+.confirm-delete-matches {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -547,7 +549,8 @@ main {
   left: 0;
 }
 
-.confirm-delete-player .overlay {
+.confirm-delete-player .overlay,
+.confirm-delete-matches .overlay {
   width: 100%;
   height: calc(100vh - 68px);
   background-color: black;
@@ -556,7 +559,8 @@ main {
   position: relative;
 }
 
-.confirm-delete-player .confirm-delete {
+.confirm-delete-player .confirm-delete,
+.confirm-delete-matches .confirm-delete {
   background-color: white;
   width: 300px;
   position: absolute;
@@ -571,7 +575,8 @@ main {
   margin-bottom: 20px;
 }
 
-.confirm-delete-player .confirm {
+.confirm-delete-player .confirm,
+.confirm-delete-matches .confirm {
   display: flex;
   align-items: center;
   justify-content: space-between;

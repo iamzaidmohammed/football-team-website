@@ -26,10 +26,17 @@ if ($stmt) {
         ];
     }
 
-    $stmt->close();
+    $empty = "";
+    if ($stmt->num_rows() < 1) {
+        $empty = "No matches available.";
+        echo json_encode($empty);
+    } else {
 
-    // Output the results as JSON
-    echo json_encode($matches);
+        // Output the results as JSON
+        // echo json_encode(["status" => "success", "message" => $matches]);
+        $stmt->close();
+        echo json_encode($matches);
+    }
 } else {
     echo json_encode(["status" => "error", "message" => "Failed to prepare the statement."]);
 }
