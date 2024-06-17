@@ -7,7 +7,6 @@ function initializeEditMatchFunctionality() {
   editBtn.forEach((button) => {
     button.addEventListener("click", () => {
       formContainer.style.display = "block";
-      console.log(document.querySelector("#edit-match-id").value);
     });
   });
 

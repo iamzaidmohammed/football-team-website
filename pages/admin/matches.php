@@ -148,6 +148,35 @@
             </form>
         </div>
 
+        <!-- Update Match Form -->
+        <div class="update-fixture-container" style="display: none;">
+            <div class="overlay"></div>
+            <form action="./php/updateFixture.php" method="POST" id="update-fixture-form">
+                <header>
+                    <p>Update Match</p>
+                    <i class="fa-solid fa-xmark update-close"></i>
+                </header>
+
+                <div class="update-fixture-error-message" style="display: none;"></div>
+
+                <input type="hidden" name="update-match-id" id="update-match-id">
+
+                <div class="add-inputs">
+                    <div class="add-fields home-team-score">
+                        <label for="update-home-team-score">Home Team Score</label>
+                        <input type="number" name="update-home-team-score" id="update-home-team-score">
+                    </div>
+
+                    <div class="add-fields away-team-score">
+                        <label for="update-away-team-score">Away Team Score</label>
+                        <input type="number" name="update-away-team-score" id="update-away-team-score">
+                    </div>
+                </div>
+
+                <input type="submit" name="update-match" id="update-match" value="Update Match">
+            </form>
+        </div>
+
         <!-- Confirm delete matches container -->
         <div class="confirm-delete-matches" style="display: none;">
             <div class="overlay"></div>
@@ -168,6 +197,7 @@
 
 <script src="./js/addMatch.js"></script>
 <script src="./js/editFixture.js"></script>
+<script src="./js/updateFixture.js"></script>
 <script src="./js/deleteFixture.js"></script>
 <script src="./js/fetchMatches.js"></script>
 </body>

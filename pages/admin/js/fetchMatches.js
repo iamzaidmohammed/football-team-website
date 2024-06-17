@@ -1,20 +1,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const fixturesContainer = document.querySelector(".fixtures");
+
   try {
     // Send a GET request to the PHP script
     const response = await fetch("php/fetchMatches.php");
 
     // Parse the JSON response
     const matches = await response.json();
-    // const empty = await response.json();
-
-    // if (emmty) {
-    // const emptyMatchDiv = document.createElement("div");
-    // emptyMatchDiv.textContent = matches.message;
-    // fixturesContainer.appendChild(emptyMatchDiv);
-    // }
-
-    // console.log(typeof matches == "string");
 
     if (typeof matches == "string") {
       const emptyMatchDiv = document.createElement("div");
@@ -91,6 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const updateBtn = document.createElement("span");
         updateBtn.classList.add("update", "btn");
         updateBtn.textContent = "Update";
+        updateBtn.addEventListener("click", () => updateMatchID(match));
         btnsDiv.appendChild(updateBtn);
 
         const deleteBtn = document.createElement("span");
@@ -108,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Call the function to initialize edit functionality
     initializeEditMatchFunctionality();
-    // initializeUpdateMatchFunctionality();
+    initializeUpdateMatchFunctionality();
     initializeDeleteMatchFunctionality();
   } catch (error) {
     console.error("Error fetching Matches:", error);
