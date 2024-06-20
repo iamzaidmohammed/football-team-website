@@ -39,8 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       if (data.status == "success") {
-        // location.reload();
-        console.log(data.message);
+        location.reload();
       } else {
         // Display the error message
         error.style.display = "block";
