@@ -2,15 +2,15 @@
 header('Content-Type: application/json');
 include_once '../../../config/db.php';
 
-$stmt = $db_connection->prepare("SELECT id, match_date, home_team_logo, home_team_name, away_team_logo, away_team_name, match_time, status FROM matches WHERE status = ?");
+$stmt = $db_connection->prepare("SELECT id, match_date, home_team_logo, home_team_name, away_team_logo, away_team_name, match_time, status, home_team_score, away_team_score FROM matches WHERE status = ?");
 
 if ($stmt) {
-    $match_status = 'upcoming';
+    $match_status = 'past';
     $stmt->bind_param('s', $match_status);
     $stmt->execute();
 
     // Bind each column to a variable
-    $stmt->bind_result($id, $match_date, $home_logo, $home_team_name, $away_logo, $away_team_name,  $match_time, $status);
+    $stmt->bind_result($id, $match_date, $home_logo, $home_team_name, $away_logo, $away_team_name,  $match_time, $status, $home_team_score, $away_team_score);
 
     $matches = [];
     while ($stmt->fetch()) {
@@ -22,7 +22,9 @@ if ($stmt) {
             'away_logo' => $away_logo,
             'away_team_name' => $away_team_name,
             'time' => $match_time,
-            'status' => $status
+            'status' => $status,
+            'home_team_score' => $home_team_score,
+            'away_team_score' => $away_team_score
         ];
     }
 

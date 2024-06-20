@@ -22,31 +22,9 @@
         <div class="main-content">
             <div class="fixtures">
                 <h2>Upcoming Matches</h2>
-
             </div>
             <div class="results">
                 <h2>Past Matches</h2>
-                <div class="match">
-                    <div class="match-date">
-                        12th June, 2024
-                    </div>
-                    <div class="teams">
-                        <div class="team r-home">
-                            <img src="../../assets/images/team01.png" alt="Home team logo" class="team_logo r-home-logo">
-                            <p class="team_name right r-home-name">Manchester City</p>
-                        </div>
-                        <div class="scores">
-                            <span class="home-score score">3</span>
-                            :
-                            <span class="away-score score">2</span>
-                        </div>
-                        <div class="team r-away">
-                            <img src="../../assets/images/team01.png" alt="Away team logo" class="team_logo r-away-logo">
-                            <p class="team_name r-away-name">Manchester City</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -177,6 +155,35 @@
             </form>
         </div>
 
+        <!-- Update Past Match Form -->
+        <div class="update-results-container" style="display: none;">
+            <div class="overlay"></div>
+            <form action="./php/updatePastMatches.php" method="POST" id="update-results-form">
+                <header>
+                    <p>Change Scores</p>
+                    <i class="fa-solid fa-xmark update-results-close"></i>
+                </header>
+
+                <div class="update-results-error-message" style="display: none;"></div>
+
+                <input type="hidden" name="update-results-match-id" id="update-results-match-id">
+
+                <div class="add-inputs">
+                    <div class="add-fields home-team-score">
+                        <label for="update-results-home-team-score">Home Team Score</label>
+                        <input type="number" name="update-results-home-team-score" id="update-results-home-team-score">
+                    </div>
+
+                    <div class="add-fields away-team-score">
+                        <label for="update-results-away-team-score">Away Team Score</label>
+                        <input type="number" name="update-results-away-team-score" id="update-results-away-team-score">
+                    </div>
+                </div>
+
+                <input type="submit" name="update-results" id="update-results" value="Update Match">
+            </form>
+        </div>
+
         <!-- Confirm delete matches container -->
         <div class="confirm-delete-matches" style="display: none;">
             <div class="overlay"></div>
@@ -199,6 +206,8 @@
 <script src="./js/editFixture.js"></script>
 <script src="./js/updateFixture.js"></script>
 <script src="./js/deleteFixture.js"></script>
+<script src="./js/updatePastMatches.js"></script>
+<script src="./js/fetchPastMatches.js"></script>
 <script src="./js/fetchMatches.js"></script>
 </body>
 

@@ -430,7 +430,8 @@ main {
 .add-player-container,
 .add-match-container,
 .edit-fixture-container,
-.update-fixture-container {
+.update-fixture-container,
+.update-results-container {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -442,7 +443,8 @@ main {
 .add-player-container .overlay,
 .add-match-container .overlay,
 .edit-fixture-container .overlay,
-.update-fixture-container .overlay {
+.update-fixture-container .overlay,
+.update-results-container .overlay {
   width: 100%;
   height: 100vh;
   background-color: black;
@@ -455,7 +457,8 @@ main {
 #add-player-form,
 #add-match-form,
 #edit-fixture-form,
-#update-fixture-form {
+#update-fixture-form,
+#update-results-form {
   background-color: white;
   width: 70%;
   padding: 10px 20px;
@@ -470,7 +473,8 @@ main {
 #add-player-form header,
 #add-match-form header,
 #edit-fixture-form header,
-#update-fixture-form header {
+#update-fixture-form header,
+#update-results-form header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -483,7 +487,8 @@ main {
 #add-player-form .add-player-error-message,
 #add-match-form .add-match-error-message,
 #edit-fixture-form .edit-fixture-error-message,
-#update-fixture-form .update-fixture-error-message {
+#update-fixture-form .update-fixture-error-message,
+#update-results-form .update-results-error-message {
   text-align: center;
   font-size: 18px;
   color: red;
@@ -527,7 +532,8 @@ main {
 #add-player-form input[type="submit"],
 #add-match-form input[type="submit"],
 #edit-fixture-form input[type="submit"],
-#update-fixture-form input[type="submit"] {
+#update-fixture-form input[type="submit"],
+#update-results-form input[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -542,7 +548,8 @@ main {
 #add-player-form input[type="submit"]:hover,
 #add-match-form input[type="submit"]:hover,
 #edit-fixture-form input[type="submit"]:hover,
-#update-fixture-form input[type="submit"]:hover {
+#update-fixture-form input[type="submit"]:hover,
+#update-results-form input[type="submit"]:hover {
   border: 1px solid var(--secondary);
   background-color: var(--secondary);
 }
@@ -954,11 +961,13 @@ main {
     grid-area: m-time;
   }
 
-  #update-fixture-form {
+  #update-fixture-form,
+  #update-results-form {
     top: 100px;
   }
 
-  #update-fixture-form .add-inputs {
+  #update-fixture-form .add-inputs,
+  #update-results-form .add-inputs {
     display: grid;
     grid-template-areas: "h-score a-score";
     grid-template-columns: repeat(2, 1fr);
